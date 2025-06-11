@@ -1,7 +1,7 @@
 const lighthouse = require('lighthouse/core/index.cjs');
 const chromeLauncher = require('chrome-launcher');
 
-async function auditSEO(url) {
+async function auditSEOJson(url) {
   const chrome = await chromeLauncher.launch({ chromeFlags: ['--headless'] });
 
   const options = {
@@ -56,4 +56,4 @@ async function auditSEO(url) {
   }
 }
 
-module.exports = { auditSEO };
+module.exports = { auditSEOJson };
